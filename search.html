@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文献检索实操 · AI 学术文献指南</title>
+<meta name="description" content="学术文献检索的实操方法：布尔检索式语法、关键词扩展、前向与后向滚雪球、去重筛检流程、检索记录与常见误区。">
+<meta name="author" content="赖七 · 佛山大学 软件工程">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">
+      <img src="assets/img/favicon.svg" alt="" width="28" height="28">
+      <span>AI 学术文献指南</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="index.html">返回首页</a>
+      <a href="writing.html">论文写作</a>
+      <a href="submit.html">投稿与返修</a>
+      <a href="search.html" class="is-current">检索实操</a>
+      <a href="ethics.html">学术规范</a>
+      <a href="glossary.html">术语</a>
+      <a href="deadline.html">截稿时间线</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="page-head">
+    <div class="container">
+      <p class="page-kicker">指南 03</p>
+      <h1>文献检索实操</h1>
+      <p class="lead">
+        从关键词到可复用的检索式：布尔语法、术语扩展、滚雪球追踪、
+        去重与筛检流水线，以及如何留下可供日后更新的检索记录。
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="syntax">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">01</span>布尔检索式</h2>
+        <p>把「想找什么」翻译成机器能执行的表达式，是检索质量的分水岭。各平台语法大体相通，细节略有差异。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr><th>语法</th><th>作用</th><th>示例</th><th>说明</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>AND</code></td><td>同时满足多个条件</td><td><code>graph AND "contrastive learning"</code></td><td>缩小范围，最常用</td></tr>
+            <tr><td><code>OR</code></td><td>命中任一即可</td><td><code>("self-supervised" OR "unsupervised")</code></td><td>用于同义词扩展</td></tr>
+            <tr><td><code>NOT</code></td><td>排除某类结果</td><td><code>transformer NOT "time series"</code></td><td>谨慎使用，容易误杀相关文献</td></tr>
+            <tr><td><code>" "</code></td><td>短语精确匹配</td><td><code>"knowledge distillation"</code></td><td>避免被拆词</td></tr>
+            <tr><td><code>*</code></td><td>截断/通配符</td><td><code>optim* → optimization, optimizer</code></td><td>各平台通配符符号不同</td></tr>
+            <tr><td><code>NEAR/n</code></td><td>限定词距</td><td><code>retrieval NEAR/5 augment*</code></td><td>主要见于 Scopus、Web of Science</td></tr>
+            <tr><td>字段限定</td><td>限定命中位置</td><td><code>TI=("large language model")</code></td><td>标题/摘要检索精度显著高于全文</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warn">
+        <strong>平台差异要注意。</strong>
+        Google Scholar 的语法支持较为有限（可用 <code>-</code> 排除词，不支持 NEAR 与复杂嵌套）；
+        IEEE Xplore、ACM DL、Scopus、Web of Science 各自都有字段代码。
+        <strong>写完检索式要在目标平台上先跑一次</strong>，确认命中数在合理区间（太少放宽条件，太多加字段限定）。
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="terms">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">02</span>关键词从哪来</h2>
+        <p>检索失败通常不是因为语法，而是因为词不对。领域通用名、作者自造名与缩写往往指向同一件事。</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>从种子论文抽术语</h3>
+          <p>找 3–5 篇最相近的工作，抽取其标题、Keywords、Introduction 中反复出现的词，形成初始词表。</p>
+        </article>
+        <article class="card">
+          <h3>同义词与缩写表</h3>
+          <p>为每个概念列出全称、缩写与相邻说法。例如 KG / knowledge graph / knowledge base 三者都应纳入同一 OR 组。</p>
+        </article>
+        <article class="card">
+          <h3>受控词表</h3>
+          <p>医学等领域有 MeSH，图书馆学有主题词表；计算机领域虽无统一词表，但可参考 arXiv 分类与会议的主题 track 名称。</p>
+        </article>
+        <article class="card">
+          <h3>中英文并行</h3>
+          <p>中文库（CNKI、万方）与英文库命中集不同。国内应用场景或中文评测的文献，只靠英文检索会大量漏检。</p>
+        </article>
+        <article class="card">
+          <h3>相邻任务名</h3>
+          <p>换个任务名往往能捞出关键先行工作：检索 Foster hearings 之余，也试试 <code>retrieval-augmented generation</code> 与 <code>memory network</code>。</p>
+        </article>
+        <article class="card">
+          <h3>反例提示词</h3>
+          <p>明确哪些词会引入噪声（如同名的医学术语），用字段限定或 NOT 隔离，并记录原因以便日后复核。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="snowball">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">03</span>滚雪球：前向与后向</h2>
+        <p>数据库检索只能覆盖显式命中的部分，引用关系能补齐被漏掉的关键节点。</p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>后向追踪</h3>
+          <p>沿着种子论文的参考文献往回走。适合快速摸清某个方法的源流与理论基础，一般两三跳就能找到奠基性工作。</p>
+        </article>
+        <article class="card">
+          <h3>前向追踪</h3>
+          <p>查看谁引用了种子论文。适合获取最新进展，也是判断某方法影响力的方式；Google Scholar 的 Cited by 是最常用的入口。</p>
+        </article>
+        <article class="card">
+          <h3>用图谱加速</h3>
+          <p>Connected Papers 与 ResearchRabbit 可把引用关系直接可视化，帮助定位聚类的边界文献，避免在单一枝条上越挖越深。</p>
+        </article>
+        <article class="card">
+          <h3>终止条件</h3>
+          <p>连续一轮检索中新增的相关文献占比很低时即可停止，并记录停止时的检索式与日期，便于后续复检。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="pipeline">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">04</span>去重与筛检流水线</h2>
+        <p>把「搜到几百条」变成「真正读了二十篇」，需要一条可重复的流水线。</p>
+      </div>
+
+      <ol class="steps">
+        <li><strong>合并去重。</strong>用 DOI 作为主键合并多库结果；预印本与正式版同名论文要标记版本关系而非简单丢弃。</li>
+        <li><strong>标题摘要初筛。</strong>按纳入/排除标准快速过一遍，不确定者先保留，避免过早删除。</li>
+        <li><strong>全文复筛。</strong>阅读方法、实验设置与结论，确认是否真正回答你的研究问题。</li>
+        <li><strong>回溯补全。</strong>对入选论文再做一轮前向追踪，补齐遗漏。</li>
+        <li><strong>记录结果。</strong>导出 bib 并按统一命名归档，同时保存每条文献的筛选判断与一句笔记。</li>
+      </ol>
+
+      <div class="callout callout-info">
+        <strong>为什么要记录判断依据：</strong>
+        几个月后重读时，你会想知道当初某篇为什么被排除。
+        若写作的是综述或系统综述，这套记录还应与流程说明一起进入正文（可参照 PRISMA 等报告规范）。
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="matrix">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">05</span>检索记录与文献矩阵</h2>
+        <p>两张表能解决「下次又从头搜一遍」和「读完就忘」两个问题。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr><th>日期</th><th>数据库</th><th>检索式</th><th>条件</th><th>命中数</th><th>纳入数</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2026-03-11</td><td>Scopus</td><td><code>TI(("graph" AND "contrastive"))</code></td><td>2019–2026, 英文, CCF-A/B</td><td>318</td><td>26</td></tr>
+            <tr><td>2026-03-12</td><td>arXiv</td><td><code>abs:"self-supervised graph"</code></td><td>cs.LG, cs.AI</td><td>142</td><td>9</td></tr>
+            <tr><td>2026-03-15</td><td>CNKI</td><td><code>SU='图对比学习'</code></td><td>核心期刊</td><td>57</td><td>4</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr><th>文献</th><th>方法类别</th><th>数据集</th><th>关键指标</th><th>局限</th><th>与本文关系</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Author et al., 2024</td><td>数据增强式</td><td>Cora, CiteSeer</td><td>Acc 83.2%</td><td>未在大图上验证</td><td>直接对比对象</td></tr>
+            <tr><td>Author et al., 2025</td><td>生成式增广</td><td>OGB-arxiv</td><td>Acc 74.8%</td><td>训练成本高</td><td>方法启发来源</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>文献矩阵的最后一列最重要。</strong>
+        「与本文关系」直接决定了Related Work 的分类方式和 Introduction 中空白的位置。
+        写不出这一列，说明这篇暂时还不需要读。
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="pitfalls">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">06</span>常见检索误区</h2>
+        <p>这些做法会显著降低召回质量，且往往不易自查。</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="pitfall">
+          <h3>只用单一数据库</h3>
+          <p>Google Scholar 覆盖广但精度低，Scopus/WoS 适合精确检索，arXiv 能拿到最新预印本。只用一个库会漏掉相当比例的文献。</p>
+        </div>
+        <div class="pitfall">
+          <h3>不保存检索式</h3>
+          <p>三个月后无法复现当时的命中范围，也没法在新增确认新工作时增量检索。建议用表格记录每次的检索式与命中数。</p>
+        </div>
+        <div class="pitfall">
+          <h3>按引用量排序挑选</h3>
+          <p>引用量有时间累积偏差，近两年的高质量工作天然吃亏。应结合时间加权（如 Citations / Year）与同行推荐。</p>
+        </div>
+        <div class="pitfall">
+          <h3>只追近三年</h3>
+          <p>经典方法往往年代较早，漏掉奠基性工作会导致 Related Work 缺乏纵深，也容易重复提出已有方案。</p>
+        </div>
+        <div class="pitfall">
+          <h3>被标题里的热门词吸引</h3>
+          <p>标题含 LLM、agent 等词不等于方法相关。以摘要中的任务定义与实验设置为准判断是否纳入。</p>
+        </div>
+        <div class="pitfall">
+          <h3>忽略版本差异</h3>
+          <p>arXiv 预印本与会议正式版的实验与结论可能不同。引用时应以被录用的版本为准，并优先给出正式出版信息。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="next">
+    <div class="container">
+      <div class="section-head">
+        <h2>继续阅读</h2>
+        <p>检索之后是阅读与文献管理。</p>
+      </div>
+      <div class="grid grid-3">
+        <a class="card" href="index.html#method">
+          <h3>三遍阅读法</h3>
+          <p>由粗到精的三个层次，每一遍都有明确目标。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="index.html#tools">
+          <h3>检索工具清单</h3>
+          <p>数据库、文献管理与前沿跟踪工具的分环节推荐。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="writing.html">
+          <h3>相关工作怎么写</h3>
+          <p>按路线分类评述，而非逐篇罗列。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">
+        <img src="assets/img/favicon.svg" alt="" width="24" height="24">
+        <span>AI 学术文献指南</span>
+      </a>
+      <p>系统整理人工智能领域的学术评价体系、期刊与会议分级，以及文献检索与阅读方法，数据以官方发布为准。</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>指南</h4>
+        <a href="writing.html">论文写作</a>
+        <a href="submit.html">投稿与返修</a>
+        <a href="search.html">检索实操</a>
+      </div>
+      <div>
+        <h4>参考</h4>
+        <a href="ethics.html">学术规范</a>
+        <a href="glossary.html">术语速查</a>
+        <a href="deadline.html">截稿时间线</a>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <a href="index.html#about">数据来源</a>
+        <a href="mailto:2112671075@stu.fosu.edu.cn">联系作者</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year">2026</span> 赖七 · 佛山大学 软件工程. 保留所有权利。</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

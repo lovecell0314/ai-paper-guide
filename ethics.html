@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学术规范与 AI 使用伦理 · AI 学术文献指南</title>
+<meta name="description" content="学术写作的规范边界：引用与抄袭、自我抄袭与重复发表、署名与 CRediT 贡献声明、生成式 AI 在论文中的披露政策、图表版权与数据许可。">
+<meta name="author" content="赖七 · 佛山大学 软件工程">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">
+      <img src="assets/img/favicon.svg" alt="" width="28" height="28">
+      <span>AI 学术文献指南</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="index.html">返回首页</a>
+      <a href="writing.html">论文写作</a>
+      <a href="submit.html">投稿与返修</a>
+      <a href="search.html">检索实操</a>
+      <a href="ethics.html" class="is-current">学术规范</a>
+      <a href="glossary.html">术语</a>
+      <a href="deadline.html">截稿时间线</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="page-head">
+    <div class="container">
+      <p class="page-kicker">指南 04</p>
+      <h1>学术规范与 AI 使用伦理</h1>
+      <p class="lead">
+        引用边界、重复发表、作者署名，以及近几年新增的关键议题：
+        生成式 AI 参与写作时，各大会议要求的披露方式是什么。
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="plagiarism">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">01</span>引用与抄袭的边界</h2>
+        <p>多数争议不在于「抄没抄」，而在于「改写得够不够」与「有没有指向出处」。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr><th>行为</th><th>是否可接受</th><th>判断要点</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>直接引用原文并加引号标注</td><td><span class="lv lv-none">可接受</span></td><td>需完整标注页码或段落，篇幅不宜过长</td></tr>
+            <tr><td>改用自己的话重述并给出引用</td><td><span class="lv lv-none">推荐</span></td><td>重述后应在结构上也是自己的表述，而非仅替换同义词</td></tr>
+            <tr><td>替换若干词后照搬句式</td><td><span class="lv lv-a">不可</span></td><td>系统相似度检测主要针对此类「拼凑式改写」</td></tr>
+            <tr><td>使用他人方法描述而不引用</td><td><span class="lv lv-a">不可</span></td><td>即便是教科书式的通用表述，也应给出出处</td></tr>
+            <tr><td>复用自己已发表论文的文字</td><td><span class="lv lv-c">有限制</span></td><td>构成自我抄袭，需引用原文并说明重合部分</td></tr>
+            <tr><td>引用他人图表或数据再加工</td><td><span class="lv lv-c">需授权</span></td><td>除注明来源外，多数出版商要求取得书面授权</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>一条实用规则：</strong>合上原文，用自己的话写下这段内容，再核一遍能否找到对应的出处标注。
+        如果写出来的句子结构仍与原文高度重合，说明还是改写而非重述。
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="duplicate">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">02</span>重复投稿与切分发表</h2>
+        <p>这两类问题在双盲评审与投稿系统普及后被检测的概率大幅提高。</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="pitfall">
+          <h3>同时投多个 venue</h3>
+          <p>同一份稿件在评审期内不得同时投递两处，绝大多数会议在作者须知中明确禁止，被发现会同时取消两地资格。</p>
+        </div>
+        <div class="pitfall">
+          <h3>原样换投</h3>
+          <p>被拒后直接投给另一个 venue 是允许的，但应根据上一轮意见实质修改；完全不变地重投会削弱你的信誉。</p>
+        </div>
+        <div class="pitfall">
+          <h3>把一篇拆成多篇</h3>
+          <p>把一个完整工作切成多篇「最小可发表单元」投稿，属于 salami slicing。正确做法是一次交付完整贡献。</p>
+        </div>
+        <div class="pitfall">
+          <h3>会议版扩投期刊</h3>
+          <p>这是被认可的做法，但需显著新增内容（常见门槛为新增 30% 以上），并在投稿信中说明原版本与新增加的部分。</p>
+        </div>
+        <div class="pitfall">
+          <h3>翻译后再发表</h3>
+          <p>用另一种语言重新发表已见刊内容，需明确申明并获得双方出版方许可，否则构成重复发表。</p>
+        </div>
+        <div class="pitfall">
+          <h3>预印本与正式版</h3>
+          <p>arXiv 预印本通常不算重复发表，但部分期刊有自己的预印本政策；投稿前应确认目标刊物对预印本的态度。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="authorship">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">03</span>署名与贡献声明</h2>
+        <p>署名既是荣誉也是责任：对论文内容负责的人才能出现在作者名单上。</p>
+      </div>
+
+      <ol class="steps">
+        <li><strong>实质性贡献。</strong>在研究构思、实验设计、数据分析或论文撰写中做出实质贡献，仅提供经费、设备或一般性指导不构成作者资格。</li>
+        <li><strong>顺序协商在前。</strong>开工前约定顺序与通讯作者，中途调整要全体知情，避免投稿截止前临时变更。</li>
+        <li><strong>贡献声明。</strong>越来越多期刊要求逐条列出每位作者的具体工作，可参考 CRediT 的 14 类：构思、方法、软件、验证、形式分析、调查、数据整理、写作初稿、写作审阅、可视化、指导、项目管理、资金获取等。</li>
+        <li><strong>同意后才提交。</strong>所有作者需确认稿件版本与署名顺序；未经他人同意将其列入名单同样属于不当行为。</li>
+        <li><strong>变更须及时。</strong>《作者变更表》通常要在终稿前提交，并得到全部作者签字确认。</li>
+      </ol>
+
+      <div class="callout callout-warn">
+        <strong>「赠予作者」与「影子作者」都不可取。</strong>
+        前者把未参与者写入名单，后者把做出实质贡献的人仅放入致谢，两者都违反通行的作者资格标准。
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="genai">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">04</span>生成式 AI 的披露政策</h2>
+        <p>近两年各会议陆续出台规则，且每年更新。以下为公开政策的梳理，<strong>投稿前务必核对当届的作者须知</strong>。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr><th>对象</th><th>政策要点</th><th>备注</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ICLR</strong></td>
+              <td>任何 LLM 使用都必须在<strong>论文正文</strong>与<strong>投稿表单</strong>中披露；要求设置独立的披露小节，且<strong>不计入页数限制</strong></td>
+              <td>作者与审稿人均需披露；违规可能触发 desk rejection</td>
+            </tr>
+            <tr>
+              <td><strong>NeurIPS</strong></td>
+              <td>用于<strong>拼写检查、语法建议与编辑辅助</strong>的工具无需专门记录；若 LLM 构成研究方法的一部分，则必须在方法中写明</td>
+              <td>区分「改文字」与「参与研究」两类情形</td>
+            </tr>
+            <tr>
+              <td><strong>CVPR</strong></td>
+              <td>明确<strong>禁止使用大模型撰写审稿意见</strong></td>
+              <td>针对评审环节的保密性与责任归属</td>
+            </tr>
+            <tr>
+              <td><strong>多数期刊出版方</strong></td>
+              <td>AI 工具<strong>不得列为作者</strong>（不具备责任主体资格）；使用时须在稿件中声明使用方式与范围</td>
+              <td>具体要求见各出版商 author guidelines</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warn">
+        <strong>一个被明令禁止的行为：</strong>
+        在论文中嵌入隐藏文本（如白底白字的提示注入指令）试图影响 AI 辅助审稿，
+        ICLR 已将其认定为<strong>串通行为</strong>，属于伦理违规，作者与审稿人都要承担责任。
+      </div>
+
+      <div class="callout callout-info">
+        <strong>披露写到什么程度合适：</strong>说清工具用途、人类核查方式、作者对最终内容负责即可。
+        例如：「我们使用大语言模型辅助英文学术表达润色与 lines 检索式的整理，所有输出均由作者逐条核对，
+        作者对本稿的全部内容负责。」
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="license">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">05</span>版权、许可与数据合规</h2>
+        <p>论文之外的附属材料同样有规则。</p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>图表复用</h3>
+          <p>转载他人图表需注明原始出处，多数出版商还要求取得书面许可；自己论文在多版本引用时也需留意转让协议的限制。</p>
+        </article>
+        <article class="card">
+          <h3>代码与数据集许可</h3>
+          <p>开源不等于可随意使用。发布复现材料时选择与依赖相兼容的许可（MIT、Apache-2.0、CC BY-NC 等），并保留第三方组件的声明。</p>
+        </article>
+        <article class="card">
+          <h3>涉及人与敏感数据</h3>
+          <p>需说明数据来源、授权范围与脱敏方式；部分会议要求在附录提供数据处理说明或伦理声明。</p>
+        </article>
+        <article class="card">
+          <h3>引用规范</h3>
+          <p>避免在审稿期内为抬升自身被引而大量要求添加无关引用；这种行为会被编辑识别并处理。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="selfcheck">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">06</span>提交前合规自查</h2>
+        <p>建议在每次投稿前花十分钟过一遍这份清单。</p>
+      </div>
+
+      <ol class="steps">
+        <li><strong>原创性。</strong>关键段落是否已用自己的话重述并标注出处？是否存在未被引用却高度相似的句子？</li>
+        <li><strong>唯一性。</strong>当前是否还有其他 venue 正在评审同一份稿件？已有版本是否已在投稿信中说明？</li>
+        <li><strong>署名。</strong>所有作者是否看过并认可终稿？贡献声明是否已按要求填写？</li>
+        <li><strong>AI 使用。</strong>是否按当届政策在正文与表单中完成了披露？是否避免了隐藏文本？</li>
+        <li><strong>材料合规。</strong>代码与数据集的许可是否清晰？包含第三方图表的是否获得授权？</li>
+        <li><strong>知情同意。</strong>涉及人类数据或特殊数据的部分，是否提供了必要的说明与审批信息？</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="next">
+    <div class="container">
+      <div class="section-head">
+        <h2>继续阅读</h2>
+        <p>相关的写作与投稿环节。</p>
+      </div>
+      <div class="grid grid-3">
+        <a class="card" href="submit.html">
+          <h3>投稿与返修</h3>
+          <p>投稿前自查清单、状态解读与 rebuttal 结构。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="writing.html">
+          <h3>论文写作</h3>
+          <p>IMRaD 结构与相关工作章节的写法。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="index.html#pitfalls">
+          <h3>评价体系的常见误区</h3>
+          <p>分级、影响因子与预警名单相关的坑。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">
+        <img src="assets/img/favicon.svg" alt="" width="24" height="24">
+        <span>AI 学术文献指南</span>
+      </a>
+      <p>系统整理人工智能领域的学术评价体系、期刊与会议分级，以及文献检索与阅读方法，数据以官方发布为准。</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>指南</h4>
+        <a href="writing.html">论文写作</a>
+        <a href="submit.html">投稿与返修</a>
+        <a href="search.html">检索实操</a>
+      </div>
+      <div>
+        <h4>参考</h4>
+        <a href="ethics.html">学术规范</a>
+        <a href="glossary.html">术语速查</a>
+        <a href="deadline.html">截稿时间线</a>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <a href="index.html#about">数据来源</a>
+        <a href="mailto:2112671075@stu.fosu.edu.cn">联系作者</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year">2026</span> 赖七 · 佛山大学 软件工程. 保留所有权利。</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

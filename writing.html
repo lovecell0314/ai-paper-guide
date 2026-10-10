@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>论文写作与排版 · AI 学术文献指南</title>
+<meta name="description" content="人工智能方向学术论文的写作要点：IMRaD 结构、标题摘要写法、引言漏斗结构、图表与数据呈现规范、常见语言问题与 LaTeX 写作流程。">
+<meta name="author" content="赖七 · 佛山大学 软件工程">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">
+      <img src="assets/img/favicon.svg" alt="" width="28" height="28">
+      <span>AI 学术文献指南</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="index.html">返回首页</a>
+      <a href="writing.html" class="is-current">论文写作</a>
+      <a href="submit.html">投稿与返修</a>
+      <a href="search.html">检索实操</a>
+      <a href="ethics.html">学术规范</a>
+      <a href="glossary.html">术语</a>
+      <a href="deadline.html">截稿时间线</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="page-head">
+    <div class="container">
+      <p class="page-kicker">指南 01</p>
+      <h1>论文写作与排版</h1>
+      <p class="lead">
+        从结构到语言的落地写法：IMRaD 各部分的分工、摘要与引言的展开方式、
+        图表的呈现规范，以及写作阶段的工具与流程。
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="structure">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">01</span>IMRaD 结构与职责分工</h2>
+        <p>绝大多数顶会与期刊论文沿用 Introduction–Method–Results–and–Discussion 骨架，每一部分回答的问题不同，混写会让审稿人找不到主张。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr><th>部分</th><th>回答什么问题</th><th>常见篇幅</th><th>写作要点</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Introduction</strong></td>
+              <td>为什么要做这件事</td>
+              <td>10%–15%</td>
+              <td>从领域背景收敛到具体空白，末尾列出可逐条核验的贡献</td>
+            </tr>
+            <tr>
+              <td><strong>Related Work</strong></td>
+              <td>别人做到了哪一步</td>
+              <td>8%–12%</td>
+              <td>按路线分类评述而非逐篇罗列，结尾用定位句说明本文差异</td>
+            </tr>
+            <tr>
+              <td><strong>Method</strong></td>
+              <td>究竟怎么做的</td>
+              <td>25%–30%</td>
+              <td>符号表先行，公式逐步推导，算法配伪代码，附复杂度分析</td>
+            </tr>
+            <tr>
+              <td><strong>Experiments</strong></td>
+              <td>效果有多好、为什么好</td>
+              <td>25%–30%</td>
+              <td>数据集与评测协议写清，主实验 + 消融 + 可视分析缺一不可</td>
+            </tr>
+            <tr>
+              <td><strong>Conclusion</strong></td>
+              <td>结果意味着什么</td>
+              <td>4%–6%</td>
+              <td>不复述摘要，说明适用边界、局限与后续方向</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>篇幅是经验值不是标准。</strong>
+        会议论文受页数限制（多数 AI 顶会正文 8–9 页，参考文献与附录不计入），
+        期刊论文动辄 20–30 页，比例会随体裁变化。<strong>先看目标 venue 的 Author Kit 再动笔</strong>，
+        避免写完再砍掉一半。
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="abstract">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">02</span>标题、摘要与关键词</h2>
+        <p>这三处决定了论文能否被检索到、能否匹配到合适的审稿人，也决定了读者要不要往下看。</p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>标题</h3>
+          <p>
+            包含方法名、核心机制或适用对象，避免「Novel / Study on / Research of」这类空词。
+            好的标题能被倒着检索：<code>Method for Task under Constraint</code> 的结构既具体又不冗长。
+          </p>
+        </article>
+        <article class="card">
+          <h3>摘要</h3>
+          <p>
+            五句话覆盖：背景 → 空白 → 本文做法 → 关键结果（带数字）→ 意义。
+            长度通常在 150–250 词，<strong>不要出现未在正文中定义的缩写</strong>，也不要引用参考文献编号。
+          </p>
+        </article>
+        <article class="card">
+          <h3>关键词与 Index Terms</h3>
+          <p>
+            5–8 个为宜，优先使用领域通用术语而非自造词。避免与标题完全重复的词，
+            补足同义词与相邻领域词（如同时给出 <code>graph neural network</code> 与 <code>representation learning</code>）。
+          </p>
+        </article>
+        <article class="card">
+          <h3>摘要的两种体裁</h3>
+          <p>
+            会议摘要偏「技术陈述」，用于匹配审稿人与建 session；部分期刊要求结构化摘要
+            （背景 / 方法 / 结果 / 结论分点）。同一份投不同刊物时摘要必须重写，直接复制很容易被识别。
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="intro">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">03</span>引言的漏斗结构与贡献列表</h2>
+        <p>引言的目标不是铺垫，而是在第一页就让审稿人明白：这个空白真实存在，而本文确实填上了。</p>
+      </div>
+
+      <ol class="steps">
+        <li><strong>立背景（约 1 段）。</strong>交代任务的重要性与应用场景，给出关键引用，不要空谈「随着深度学习的发展」。</li>
+        <li><strong>梳路线（1–2 段）。</strong>概括现有主流方法及各自的前提假设，指出在哪种情形下会失效。</li>
+        <li><strong>收敛空白（1 段）。</strong>把问题收窄为一个具体缺口，明确写出「然而……尚未被解决」，这是全文最重要的一句话。</li>
+        <li><strong>给方案（1 段）。</strong>一句话说明本文思路与核心机制，随后用列表给出 3–4 条贡献。</li>
+        <li><strong>出结论（1 句）。</strong>用带数字的结果收尾，如「在 X 数据集上相对最佳基线提升 Y 个点」。</li>
+      </ol>
+
+      <div class="callout callout-info">
+        <strong>贡献列表要能被实验对应。</strong>
+        每一条 claim 都应该能在实验章节找到支撑它的那张表或那幅图。
+        审稿人通常按贡献逐条打勾，写得多而验不全，反而是扣分项。
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="figures">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">04</span>图表与数据呈现</h2>
+        <p>图表是审稿人读得最仔细的部分。格式问题会被直接当成态度问题。</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>坐标与标注</h3>
+          <p>坐标轴必须带单位，图例避免遮挡数据，误差棒说明是标准差还是置信区间，并注明重复次数与随机种子。</p>
+        </article>
+        <article class="card">
+          <h3>配色与可读</h3>
+          <p>避免仅靠颜色区分类别；考虑色觉障碍读者，转灰度后仍能分辨。同一篇论文内保持统一色板。</p>
+        </article>
+        <article class="card">
+          <h3>表格</h3>
+          <p>最优结果加粗并说明加粗规则，上行给出方法名与引用，纵向对比公平：参数量、训练成本应在表的注释中说明。</p>
+        </article>
+        <article class="card">
+          <h3>图件格式</h3>
+          <p>优先输出矢量图（<code>.pdf</code> / <code>.svg</code>）；确需位图时分辨率不低于 300 dpi，避免截图界面。字体嵌入后检查不可被替换。</p>
+        </article>
+        <article class="card">
+          <h3>数字口径</h3>
+          <p>统一保留小数位与单位；提升量写明是绝对值还是相对值。显著性检验说明方法与样本量，避免只报均值。</p>
+        </article>
+        <article class="card">
+          <h3>自明性</h3>
+          <p>图注要能单独读懂：说明「画了什么、怎么得到、结论是什么」。读者翻到图时不该回头找正文才知道含义。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="language">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">05</span>常见语言问题</h2>
+        <p>下面这些表达在初稿里出现频率最高，往往也是审稿意见里「language needs polishing」的来源。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr><th>常见问题</th><th>典型写法</th><th>建议改法</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>自我评价性形容词</td><td>This paper proposes a novel and efficient method</td><td>去掉 novel / efficient，让实验结果与审稿人来判断</td></tr>
+            <tr><td>无依据的断言</td><td>It is well known that deep models are hard to train</td><td>给出具体引用与限定条件，或改为可核验的描述</td></tr>
+            <tr><td>冗余引导句</td><td>According to the results, we can see that the model works</td><td>直接陈述：Our model improves X by Y on Z</td></tr>
+            <tr><td>模糊程度词</td><td>very good / quite fast / significantly better（无检验）</td><td>替换为量化描述，significant 仅在做过检验时使用</td></tr>
+            <tr><td>时态混乱</td><td>同一段混用过去时与现在时</td><td>已完成的动作与实验用过去时，普遍事实与结论用现在时</td></tr>
+            <tr><td>长句堆砌</td><td>一段一个长达五行的句子</td><td>一段一个主张，用短句承担推理链</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="tooling">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">06</span>LaTeX 与写作流程</h2>
+        <p>工具不决定论文档次，但稳定的流程能避免临截稿时的混乱。</p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>模板与编译</h3>
+          <p>始终使用目标会议或期刊官方 LaTeX 模板；在线写作可选 Overleaf，本地建议配 TeX Live 与 <code>latexmk</code>，两者保持同一份源码同步。</p>
+        </article>
+        <article class="card">
+          <h3>参考文献</h3>
+          <p>用 BibTeX 管理，配合 Zotero 的 Better BibTeX 自动导出，避免手工粘贴 DOI 与页码。投稿前检查 conference 字段与缩写规范。</p>
+        </article>
+        <article class="card">
+          <h3>交叉引用与版本</h3>
+          <p>图表编号一律使用 <code>\ref</code>，删除章节时不会错位；多人协作时用 Git 管理源码，提交信息写清语义，便于回溯某段改动。</p>
+        </article>
+        <article class="card">
+          <h3>重写比润色重要</h3>
+          <p>结构性问题无法靠替换词解决。若审稿意见指向「逻辑不清」，应先重写段的顺序，再处理句层面的表达。</p>
+        </article>
+      </div>
+
+      <div class="callout callout-warn">
+        <strong>一个易踩的坑：</strong>把 PPT 或 Word 里的图直接截图粘进 LaTeX，
+        会在排版后出现严重锯齿。figure 应从原始绘图脚本导出，而不是从幻灯片里导出。
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="next">
+    <div class="container">
+      <div class="section-head">
+        <h2>继续阅读</h2>
+        <p>写完之后的下一站是投稿流程与审稿意见回复。</p>
+      </div>
+      <div class="grid grid-3">
+        <a class="card" href="submit.html">
+          <h3>投稿与返修</h3>
+          <p>选会选刊、投稿系统状态解读、审稿意见回复的结构与话术。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="ethics.html">
+          <h3>学术规范</h3>
+          <p>引用边界、重复发表、署名规则与生成式 AI 的披露要求。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="glossary.html">
+          <h3>术语速查</h3>
+          <p>camera-ready、rebuttal、AoE 等投稿阶段术语的中英对照。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">
+        <img src="assets/img/favicon.svg" alt="" width="24" height="24">
+        <span>AI 学术文献指南</span>
+      </a>
+      <p>系统整理人工智能领域的学术评价体系、期刊与会议分级，以及文献检索与阅读方法，数据以官方发布为准。</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>指南</h4>
+        <a href="writing.html">论文写作</a>
+        <a href="submit.html">投稿与返修</a>
+        <a href="search.html">检索实操</a>
+      </div>
+      <div>
+        <h4>参考</h4>
+        <a href="ethics.html">学术规范</a>
+        <a href="glossary.html">术语速查</a>
+        <a href="deadline.html">截稿时间线</a>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <a href="index.html#about">数据来源</a>
+        <a href="mailto:2112671075@stu.fosu.edu.cn">联系作者</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year">2026</span> 赖七 · 佛山大学 软件工程. 保留所有权利。</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

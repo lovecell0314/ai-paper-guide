@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>截稿时间线 · AI 学术文献指南</title>
+<meta name="description" content="人工智能方向主要会议的投稿月份、截稿到录用的各环节周期、AoE 时区换算，以及用于排期的估算工具与常见避坑点。">
+<meta name="author" content="赖七 · 佛山大学 软件工程">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">
+      <img src="assets/img/favicon.svg" alt="" width="28" height="28">
+      <span>AI 学术文献指南</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="index.html">返回首页</a>
+      <a href="writing.html">论文写作</a>
+      <a href="submit.html">投稿与返修</a>
+      <a href="search.html">检索实操</a>
+      <a href="ethics.html">学术规范</a>
+      <a href="glossary.html">术语</a>
+      <a href="deadline.html" class="is-current">截稿时间线</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="page-head">
+    <div class="container">
+      <p class="page-kicker">参考 02</p>
+      <h1>截稿时间线</h1>
+      <p class="lead">
+        主要 AI 会议通常落在哪个月投稿、从截稿到录用的周期多长，
+        以及每年都会有人踩的几个时间相关的坑。
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="disclaimer">
+    <div class="container">
+      <div class="callout callout-warn">
+        <strong>请先看这段说明。</strong>
+        下表与估算工具依据近几年的公开投稿时间整理，用于<strong>提前排期</strong>参考。
+        实际截稿日每年都会浮动，部分会议还会提前宣布延期。<strong>最终以会议官网公布的 Call for Papers 为准</strong>，
+        投稿前务必确认摘要注册与全文截止两个时间点。
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="estimator">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">01</span>投稿窗口估算</h2>
+        <p>选择目标会议，按历年规律估算下一次投稿窗口的位置，用来倒推实验与写作的时间安排。</p>
+      </div>
+
+      <div class="tool">
+        <select id="ddlSelect" aria-label="选择会议">
+          <option value="none" data-month="0">请选择会议</option>
+          <optgroup label="1 月">
+            <option data-month="1">ACL</option>
+            <option data-month="1">IJCAI</option>
+            <option data-month="1">ICML</option>
+            <option data-month="1">AISTATS</option>
+          </optgroup>
+          <optgroup label="2–3 月">
+            <option data-month="2">KDD</option>
+            <option data-month="2">COLT</option>
+            <option data-month="3">ECCV（偶数年）</option>
+            <option data-month="3">ICCV（奇数年）</option>
+          </optgroup>
+          <optgroup label="5 月">
+            <option data-month="5">NeurIPS</option>
+            <option data-month="5">EMNLP</option>
+          </optgroup>
+          <optgroup label="下半年">
+            <option data-month="8">AAAI</option>
+            <option data-month="9">ICLR</option>
+            <option data-month="11">CVPR</option>
+          </optgroup>
+        </select>
+        <span class="tool-out" id="ddlResult"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="calendar">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">02</span>全年投稿日历</h2>
+        <p>按全投稿月份排列。表中「投稿窗口」指全文截止的通常月份，摘要注册一般早 1–2 周。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr><th>投稿窗口</th><th>会议</th><th>方向</th><th>通常召开</th><th>说明</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1 月上旬</td><td><strong>ACL</strong></td><td>自然语言处理</td><td>同年 7 月</td><td>NLP 主会场，此后 EMNLP 是下一个窗口</td></tr>
+            <tr><td>1 月中下旬</td><td><strong>IJCAI</strong></td><td>AI 综合</td><td>同年 8 月</td><td>与 AAAI 并列的两大综合会议</td></tr>
+            <tr><td>1 月下旬</td><td><strong>ICML</strong></td><td>机器学习</td><td>同年 7 月</td><td>机器学习旗舰会议，投稿量大</td></tr>
+            <tr><td>1 月底</td><td><strong>AISTATS</strong></td><td>统计机器学习</td><td>同年 5 月</td><td>偏统计与贝叶斯方法</td></tr>
+            <tr><td>2 月上旬</td><td><strong>KDD</strong></td><td>数据挖掘</td><td>同年 8 月</td><td>分多个 track，不同轮次时间不一</td></tr>
+            <tr><td>2 月上旬</td><td><strong>COLT</strong></td><td>学习理论</td><td>同年 7 月</td><td>偏数学证明与泛化界</td></tr>
+            <tr><td>2 月底–3 月初</td><td><strong>ECCV</strong></td><td>计算机视觉</td><td>同年 9–10 月</td><td>偶数年举办，与 ICCV 隔年交替</td></tr>
+            <tr><td>3 月</td><td><strong>ICCV</strong></td><td>计算机视觉</td><td>同年 10 月</td><td>奇数年举办，录取标准严格</td></tr>
+            <tr><td>5 月中下旬</td><td><strong>NeurIPS</strong></td><td>机器学习</td><td>同年 12 月</td><td>投稿规模常年居前，需预留 rebuttal 时间</td></tr>
+            <tr><td>5 月下旬</td><td><strong>EMNLP</strong></td><td>自然语言处理</td><td>同年 10–11 月</td><td>ACL 之外的主要出口</td></tr>
+            <tr><td>7 月底–8 月初</td><td><strong>AAAI</strong></td><td>AI 综合</td><td>次年 2 月</td><td>收稿范围最广，适合跨学科工作</td></tr>
+            <tr><td>9 月下旬</td><td><strong>ICLR</strong></td><td>深度学习</td><td>次年 4–5 月</td><td>OpenReview 公开评审，需注意披露要求</td></tr>
+            <tr><td>11 月中旬</td><td><strong>CVPR</strong></td><td>计算机视觉</td><td>次年 6 月</td><td>视觉方向投稿量最大的顶级会议</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>关于隔年交替：</strong>ECCV 与 ICCV 在视觉方向上轮流成为年度主场，
+        选哪一个取决于你的实验周期，而不是两者等级高低——注意 ECCV 在 CCF 目录中为 B 类但水平很高。
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="aoe">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">03</span>AoE 与时区换算</h2>
+        <p>几乎所有国际会议都使用 AoE，理解它比记住每个会议的日期更重要。</p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>什么是 AoE</h3>
+          <p>Anywhere on Earth，指 UTC−12 时区，即地球上最后一个进入新一天的时区。用它可以避免「哪天的截止时间」的争议。</p>
+        </article>
+        <article class="card">
+          <h3>换算方法</h3>
+          <p>把 AoE 的截止时刻<strong>加上约 20 小时</strong>即为北京时间。例如截止为 9 月 24 日 23:59 AoE，对应北京时间 9 月 25 日 19:59。</p>
+        </article>
+        <article class="card">
+          <h3>夏令时的影响</h3>
+          <p>北美本地时间会随夏令时切换，但 AoE 本身不变。用 AoE 或 UTC 记录截止时间，可有效避免歧义。</p>
+        </article>
+        <article class="card">
+          <h3>留出余量</h3>
+          <p>建议在截止时间前 12–24 小时完成上传：系统拥堵、格式报错与合作者失联是最常见的三类意外。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="cycle">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">04</span>从截稿到录用：周期参考</h2>
+        <p>估算毕业与结题时间时，真正要算的不是截稿日，而是出结果的月份。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr><th>环节</th><th>会议</th><th>期刊</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>摘要注册 → 全文截止</td><td>1–2 周</td><td>不适用</td></tr>
+            <tr><td>投稿到一审结果</td><td>2–4 个月</td><td>1–3 个月</td></tr>
+            <tr><td>回应 / 修改窗口</td><td>rebuttal 1–2 周</td><td>修改期 1–3 个月或更长</td></tr>
+            <tr><td>确定结果后的终稿</td><td>2–6 周</td><td>接收后数周</td></tr>
+            <tr><td>全流程总时长</td><td>约 3–6 个月</td><td>约 6–18 个月</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>倒推排期：</strong>从目标出结果的时间往回算，依次减去终稿、修改、评审各环节的时长，
+        得到动笔与跑实验的deadline。多数低估的人是因为只算了「写论文」的时间。
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="planning">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">05</span>排期建议</h2>
+        <p>把一年的投稿节奏提前固定下来，能显著减少临时赶工。</p>
+      </div>
+
+      <ol class="steps">
+        <li><strong>定年度目标。</strong>年初列出今年准备投的 2–3 个 venue，按其投稿月份排成时间轴。</li>
+        <li><strong>按逆序准备。</strong>先确定最近的那个截稿日，再倒推实验、写作与内部评审的时间点。</li>
+        <li><strong>错开强度。</strong>5 月与 1 月是投稿密度最高的月份，避免同时准备两个同月的重头投稿。</li>
+        <li><strong>预留被拒的出口。</strong>为每个投稿选定下一站（另一个会议或期刊），被拒后立即按计划转投，减少空窗。</li>
+        <li><strong>记录每次投稿。</strong>日期、版本、审稿意见要点与下次计划，形成自己的投稿台账。</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="pitfalls">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">06</span>时间相关的坑</h2>
+        <p>这些问题与科研水平无关，纯粹是对流程不熟悉导致的。</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="pitfall">
+          <h3>只记全文截止日</h3>
+          <p>多数会议要求先完成摘要注册，逾期未注册会导致系统不允许提交全文，即便正文已经写完。</p>
+        </div>
+        <div class="pitfall">
+          <h3>把 AoE 当成北京时间</h3>
+          <p>两地相差约 20 小时。若按北京时间的同一天理解，可能提前一天错过；反之则可能错觉还有时间。</p>
+        </div>
+        <div class="pitfall">
+          <h3>临截止才开始上传</h3>
+          <p>PDF 体积超限、字体未嵌入、双盲检查未通过，这些都在提交系统的最后一步才会暴露。</p>
+        </div>
+        <div class="pitfall">
+          <h3>忽略双轮审稿规则</h3>
+          <p>部分会议采用两轮制，第一轮被拒的稿件不能修改后直接投第二轮。投稿前须知中有说明。</p>
+        </div>
+        <div class="pitfall">
+          <h3>错过注册与终稿</h3>
+          <p>论文被接收后若未在截止日前完成会议注册或提交终稿，仍可能被撤出正式论文集。</p>
+        </div>
+        <div class="pitfall">
+          <h3>相信二手日程表</h3>
+          <p>各类汇总表更新滞后且偶有错误。推荐同时查 ccfddl 等社区维护的 Deadline 站点与会议官网。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="trackers">
+    <div class="container">
+      <div class="section-head">
+        <h2>持续跟踪的工具</h2>
+        <p>与其手工维护表格，不如订阅自动维护的数据源，并在投稿前以官网为准做最后一次确认。</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>CCF Deadline 类站点</h3>
+          <p>社区协作维护，按 CCF 等级与方向分类，提供精确到秒的倒计时，国内访问较为稳定。</p>
+        </article>
+        <article class="card">
+          <h3>国际 DDL 站点</h3>
+          <p>ai deadline 类站点覆盖 ML、CV、NLP、Robotics 等方向，含举办地点与往年数据。</p>
+        </article>
+        <article class="card">
+          <h3>会议官网与邮件列表</h3>
+          <p>最权威的信息源。订阅会议邮件列表或关注官方账号，可第一时间获取延期与规则变更通知。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="next">
+    <div class="container">
+      <div class="section-head">
+        <h2>继续阅读</h2>
+        <p>投稿前还需要确认的事项。</p>
+      </div>
+      <div class="grid grid-3">
+        <a class="card" href="submit.html">
+          <h3>投稿与返修</h3>
+          <p>投前自查、状态流转与审稿意见回复。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="ethics.html">
+          <h3>学术规范</h3>
+          <p>重复投稿规则与 AI 使用披露要求。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="index.html#confs">
+          <h3>会议分级速查</h3>
+          <p>49 个会议的方向与 CCF 等级。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">
+        <img src="assets/img/favicon.svg" alt="" width="24" height="24">
+        <span>AI 学术文献指南</span>
+      </a>
+      <p>系统整理人工智能领域的学术评价体系、期刊与会议分级，以及文献检索与阅读方法，数据以官方发布为准。</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>指南</h4>
+        <a href="writing.html">论文写作</a>
+        <a href="submit.html">投稿与返修</a>
+        <a href="search.html">检索实操</a>
+      </div>
+      <div>
+        <h4>参考</h4>
+        <a href="ethics.html">学术规范</a>
+        <a href="glossary.html">术语速查</a>
+        <a href="deadline.html">截稿时间线</a>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <a href="index.html#about">数据来源</a>
+        <a href="mailto:2112671075@stu.fosu.edu.cn">联系作者</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year">2026</span> 赖七 · 佛山大学 软件工程. 保留所有权利。</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

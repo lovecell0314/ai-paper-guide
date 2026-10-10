@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>投稿与返修 · AI 学术文献指南</title>
+<meta name="description" content="学术投稿全流程：投稿前自查、选会与选刊决策、投稿系统状态解读、审稿意见类型、rebuttal 回复结构与话术模板、camera-ready 注意事项。">
+<meta name="author" content="赖七 · 佛山大学 软件工程">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">
+      <img src="assets/img/favicon.svg" alt="" width="28" height="28">
+      <span>AI 学术文献指南</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="index.html">返回首页</a>
+      <a href="writing.html">论文写作</a>
+      <a href="submit.html" class="is-current">投稿与返修</a>
+      <a href="search.html">检索实操</a>
+      <a href="ethics.html">学术规范</a>
+      <a href="glossary.html">术语</a>
+      <a href="deadline.html">截稿时间线</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="page-head">
+    <div class="container">
+      <p class="page-kicker">指南 02</p>
+      <h1>投稿与返修</h1>
+      <p class="lead">
+        从投前自查到录用后的终稿提交：选择投稿对象的判断依据、系统与状态的对应关系、
+        各类审稿结果的应对方式，以及回复审稿意见的结构与话术。
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="checklist">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">01</span>投稿前自查清单</h2>
+        <p>下列条目在多数顶会与期刊的 Author Instructions 中都会出现，缺任意一条都可能直接被退回。</p>
+      </div>
+
+      <ol class="steps">
+        <li><strong>格式与页数。</strong>使用官方模板，正文不超页数限制，参考文献与附录不计入的部位确认清楚。</li>
+        <li><strong>匿名性。</strong>双盲评审的会议需移除作者信息与可识别的自我引用，第三方致谢同样要处理。</li>
+        <li><strong>伦理与披露。</strong>涉及人体或敏感数据需声明审批情况；使用了生成式 AI 的，按当届政策填写披露栏。</li>
+        <li><strong>可复现材料。</strong>代码、数据与附录按要求上传，README 说明环境与运行方式，外部链接需在审稿期内有效。</li>
+        <li><strong>语言与图表。</strong>通读一遍查重（相似度过高的句子要改写），检查矢量图、字体嵌入与图注自明性。</li>
+        <li><strong>作者与单位。</strong>确认署名顺序、单位编号、通讯作者与邮箱，提交后作者名单基本无法更改。</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="choose">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">02</span>选会还是选刊</h2>
+        <p>两者的评审逻辑、周期与成果认定方式都不同，选错会浪费几个月时间。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr><th>维度</th><th>会议</th><th>期刊</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>评审周期</strong></td>
+              <td>固定截稿日，通常 2–4 个月出结果</td>
+              <td>随时可投，一轮往往 3–12 个月</td>
+            </tr>
+            <tr>
+              <td><strong>修改机会</strong></td>
+              <td>多数只有一轮有限的 rebuttal</td>
+              <td>major revision 后可再审，可能多轮</td>
+            </tr>
+            <tr>
+              <td><strong>篇幅限制</strong></td>
+              <td>正文 8–9 页，附录可补充</td>
+              <td>通常不限页数，但要求内容完整</td>
+            </tr>
+            <tr>
+              <td><strong>适合的工作</strong></td>
+              <td>单点突出、时效性强的新结果</td>
+              <td>需要完整论证与系统性实验的工作</td>
+            </tr>
+            <tr>
+              <td><strong>转投惯例</strong></td>
+              <td>会议扩展版投期刊需显著新增（通常 &gt;30%）</td>
+              <td>被拒后可改投其他刊物，不宜原样再投</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>判断依据：</strong>看最近三年与你工作最相近的 5 篇论文都发在哪里，
+        再结合本单位认定的目录等级与毕业时间节点决定。
+        若被某会议拒稿，先看审稿意见指向的是运气问题（分歧大）还是硬伤（实验不足），再决定是补实验重投还是降级投。
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="states">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">03</span>投稿系统状态解读</h2>
+        <p>不同系统命名略有差异，但状态背后的含义基本一致。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr><th>常见状态</th><th>含义</th><th>作者该做什么</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Submitted / With Editor</strong></td><td>已完成提交，正在分配与初筛</td><td>等待即可，此阶段不宜催</td></tr>
+            <tr><td><strong>Under Review</strong></td><td>已送外审，审稿人正在评阅</td><td>准备可能被问到的补充材料</td></tr>
+            <tr><td><strong>Under Review (invited)</strong></td><td>审稿人邀请尚未全部接受</td><td>耐心等待，通常不需干预</td></tr>
+            <tr><td><strong>Decision Pending</strong></td><td>意见齐了，正在讨论或汇总</td><td>等待决议，可整理可能的返修思路</td></tr>
+            <tr><td><strong>Major / Minor Revision</strong></td><td>有条件接收，需按意见修改</td><td>按条回复并标注改动位置</td></tr>
+            <tr><td><strong>Reject / Desk Reject</strong></td><td>拒稿；后者未经外审</td><td>核对是否符合 scope 与格式，再改投</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warn">
+        <strong>Desk reject 不等于工作没价值。</strong>
+        常见原因是超出征稿范围、页数严重超标、匿名性被破坏或重复投稿。
+        逐条核对后会发现，大部分可以在正式送审前规避。
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="decision">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">04</span>审稿结果的类型</h2>
+        <p>会议与期刊的术语不同，但本质上都是「接收 / 有条件接收 / 拒稿」三类的细分。</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="pitfall">
+          <h3>Accept（直接接收）</h3>
+          <p>少数情况。通常只需按格式改排版，无需实质修改；仍建议逐条回应审稿意见中的疑问。</p>
+        </div>
+        <div class="pitfall">
+          <h3>Minor Revision（小修）</h3>
+          <p>意见多为措辞、补充实验细节或说明某处引用。逐条回应并说明改动位置，一般不会再外审。</p>
+        </div>
+        <div class="pitfall">
+          <h3>Major Revision（大修）</h3>
+          <p>存在未被说服的审稿人，通常要求补充实验或重写论证。需要按期提交修改说明书，否则视为放弃。</p>
+        </div>
+        <div class="pitfall">
+          <h3>Reject and Resubmit</h3>
+          <p>介于拒稿与大修之间：本次不录，但欢迎修改后重新提交。此时应按「新问题」重写，而非仅仅补实验。</p>
+        </div>
+        <div class="pitfall">
+          <h3>Reject（拒稿）</h3>
+          <p>注意区分「打分低」与「意见冲突」：若多位审稿人对核心结论认可、只因 novelty 评分不足，可考虑换 venue。</p>
+        </div>
+        <div class="pitfall">
+          <h3>Borderline / Weak Reject</h3>
+          <p>会议中常见。若有一到两位审稿人明确支持，rebuttal 阶段补足其提出的疑点，仍有机会被拉回来。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="rebuttal">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">05</span>审稿意见回复的结构</h2>
+        <p>回复的目标不是争辩，而是让持疑的那位审稿人在最短时间里看到「质疑已被处理」。</p>
+      </div>
+
+      <ol class="steps">
+        <li><strong>开头致谢一小段。</strong>感谢时间与具体建议，不要写套话式抱怨。</li>
+        <li><strong>概述主要改动。</strong>用 2–3 句总结做了哪些实质性修改，便于 area chair 快速定位。</li>
+        <li><strong>逐条 point-to-point 回复。</strong>先引用原意见（完整引用或概括），再给出回复，最后指明改动位置。</li>
+        <li><strong>标注改动位置。</strong>写明页码、行号、图表编号；必要处贴出前后对照的图或数据。</li>
+        <li><strong>无法完成的意见要说明。</strong>解释为什么不在本次范围内，并给出替代的证据或列为未来工作。</li>
+      </ol>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr><th>意见类型</th><th>建议回复策略</th><th>参考句式</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>要求补充对比实验</td>
+              <td>直接补做并给出结果；确实无法复现时说明条件限制</td>
+              <td>We have added the comparison with X in Table 3; our method achieves … under the same setting.</td>
+            </tr>
+            <tr>
+              <td>质疑创新性不足</td>
+              <td>回到 differentiation，指出与最相近工作的机制差异</td>
+              <td>Unlike X which relies on …, our design targets …; this leads to the observed gain in …</td>
+            </tr>
+            <tr>
+              <td>指出表述含糊</td>
+              <td>重写该段并给出明确定义，附上改动后的原文</td>
+              <td>We have revised Section 3.2 to clearly define … as …</td>
+            </tr>
+            <tr>
+              <td>实验设置有疑问</td>
+              <td>补充超参、随机种子、训练成本与评测协议</td>
+              <td>All runs use five random seeds; hyperparameters are listed in Appendix B.</td>
+            </tr>
+            <tr>
+              <td>误解了论文内容</td>
+              <td>不指责审稿人，用重写后的段落消除歧义</td>
+              <td>We apologize for the unclear statement. The intended meaning is … We have rewritten …</td>
+            </tr>
+            <tr>
+              <td>超出本次范围</td>
+              <td>承认局限，说明已有替代证据或列入后续工作</td>
+              <td>This remains an open direction; we discuss it as a limitation in Section 6.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>一条通用原则：</strong>把每条回复控制在「结论 + 证据 + 位置」三句之内。
+        审稿人往往同时处理多篇稿子，长篇辩解会被直接略过。
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="camera">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">06</span>录用之后：终稿与国际会议注册</h2>
+        <p>到这一步被拒的概率很低，但格式与流程问题仍可能导致论文无法正式收录。</p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Camera-ready</h3>
+          <p>按 Reviewer 意见完成最终修改，使用官方模板重新排版，检查页数、字体嵌入、参考文献完整性，多数会议要求作者在截止日前完成。</p>
+        </article>
+        <article class="card">
+          <h3>版权与许可</h3>
+          <p>签署版权转让或选择 CC 协议前，确认单位政策与后续是否要扩展投期刊；不同协议对 arXiv 预印本版本的限制也不同。</p>
+        </article>
+        <article class="card">
+          <h3>注册与报告</h3>
+          <p>多数会议要求至少一位作者完成注册并在截止日前缴费，否则论文会从 proceedings 中撤下；注意早期注册的折扣窗口。</p>
+        </article>
+        <article class="card">
+          <h3>预印本与归档</h3>
+          <p>确认是否允许同步上传 arXiv，并为 DOI、bib 条目与项目主页建立长期可访问地址，便于他人引用。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="next">
+    <div class="container">
+      <div class="section-head">
+        <h2>继续阅读</h2>
+        <p>与投稿相关的规范问题与时间安排。</p>
+      </div>
+      <div class="grid grid-3">
+        <a class="card" href="ethics.html">
+          <h3>学术规范</h3>
+          <p>一稿多投、切分发、署名规则与生成式 AI 的披露要求。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="deadline.html">
+          <h3>截稿时间线</h3>
+          <p>主要会议的投稿月份与排期建议。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="writing.html">
+          <h3>论文写作</h3>
+          <p>IMRaD 结构、摘要写法与常见语言问题。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">
+        <img src="assets/img/favicon.svg" alt="" width="24" height="24">
+        <span>AI 学术文献指南</span>
+      </a>
+      <p>系统整理人工智能领域的学术评价体系、期刊与会议分级，以及文献检索与阅读方法，数据以官方发布为准。</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>指南</h4>
+        <a href="writing.html">论文写作</a>
+        <a href="submit.html">投稿与返修</a>
+        <a href="search.html">检索实操</a>
+      </div>
+      <div>
+        <h4>参考</h4>
+        <a href="ethics.html">学术规范</a>
+        <a href="glossary.html">术语速查</a>
+        <a href="deadline.html">截稿时间线</a>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <a href="index.html#about">数据来源</a>
+        <a href="mailto:2112671075@stu.fosu.edu.cn">联系作者</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year">2026</span> 赖七 · 佛山大学 软件工程. 保留所有权利。</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

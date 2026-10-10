@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 学术文献与投稿指南 · 期刊会议分级速查</title>
+<meta name="description" content="面向人工智能领域研究者的文献与投稿工具站：厘清 CCF 分级、中科院分区、JCR 分区与影响因子的区别，汇总 AI 方向顶级期刊与重要学术会议，并提供检索工具与论文阅读方法。">
+<meta name="keywords" content="CCF分级,中科院分区,JCR分区,影响因子,人工智能顶会,人工智能顶刊,学术投稿,文献检索,论文阅读">
+<meta name="author" content="赖七 · 佛山大学 软件工程">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="#top">
+      <img src="assets/img/favicon.svg" alt="" width="28" height="28">
+      <span>AI 文献与论文指南</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="#ranking">评价体系</a>
+      <a href="#journals">顶级期刊</a>
+      <a href="#confs">重要会议</a>
+      <a href="writing.html">写作</a>
+      <a href="submit.html">投稿</a>
+      <a href="search.html">检索</a>
+      <a href="ethics.html">规范</a>
+      <a href="glossary.html">术语</a>
+      <a href="deadline.html">时间线</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="badge">依据 CCF 目录第七版（2026.03）整理</span>
+        <h1>AI 学术文献<br>与投稿指南</h1>
+        <p class="lead">
+          系统梳理人工智能领域的学术评价体系、期刊与会议分级，汇编文献检索工具、研究工作流与论文阅读方法，
+          为选题调研、选刊投稿与成果认定提供参考。
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#ranking">了解评价体系</a>
+          <a class="btn btn-ghost" href="#confs">检索会议分级</a>
+        </div>
+        <ul class="hero-meta">
+          <li>49 个会议 · 10 个方向</li>
+          <li>4 本 CCF-A 类期刊</li>
+          <li>赖七 · 佛山大学软件工程</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="card-mock">
+          <div class="mock-bar"><i></i><i></i><i></i></div>
+          <div class="mock-body">
+            <div class="mock-line w70"></div>
+            <div class="mock-line w45"></div>
+            <div class="mock-chart">
+              <span style="--h:44%"></span>
+              <span style="--h:72%"></span>
+              <span style="--h:58%"></span>
+              <span style="--h:90%"></span>
+              <span style="--h:66%"></span>
+              <span style="--h:96%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ranking">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">01</span>学术评价体系概览</h2>
+        <p>CCF 推荐目录、中科院分区、JCR 分区与影响因子是四套相互独立的评价口径，其评价对象、发布机构与适用场景各不相同。</p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card">
+          <div class="card-icon">CCF</div>
+          <h3>CCF 推荐国际学术会议和期刊目录</h3>
+          <p>
+            中国计算机学会（CCF）发布，把计算机领域的会议和期刊分为 A / B / C 三类。
+            约三年更新一次，<strong>第七版于 2026 年 3 月发布</strong>（较上版新增期刊 14 个、升级 6 个）。
+            是国内计算机学科投稿、毕业要求、成果认定最常用的依据。
+          </p>
+        </article>
+        <article class="card">
+          <div class="card-icon">分区</div>
+          <h3>中科院文献情报中心期刊分区表</h3>
+          <p>
+            简称「中科院分区」。按影响因子把 SCI 期刊划分为 1–4 区：1 区为前 5%，2 区 5%–20%，
+            3 区 20%–50%，4 区为后 50%。另有「大类 / 小类」与「TOP 期刊」标识，
+            并分为基础版与升级版，认定时要看清楚用哪一套。
+          </p>
+        </article>
+        <article class="card">
+          <div class="card-icon">JCR</div>
+          <h3>JCR 分区（Q1–Q4）</h3>
+          <p>
+            科睿唯安（Clarivate）发布。把同一学科内的期刊按影响因子从高到低<strong>平均分成四等份</strong>，
+            各占 25%，即 Q1 到 Q4。与中科院分区的区别在于：JCR 是等分，中科院是金字塔型分布。
+          </p>
+        </article>
+        <article class="card">
+          <div class="card-icon">IF</div>
+          <h3>影响因子与检索类型</h3>
+          <p>
+            影响因子（IF）指某期刊前两年发表的论文在统计当年的平均被引次数，是期刊层面的指标，
+            <strong>不能用来评价单篇论文</strong>。常见的检索类型还有 SCI / SCIE、EI Compendex、
+            Scopus、CSCD 与北大核心，毕业要求里通常只认其中某几类。
+          </p>
+        </article>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>一句话区分：</strong>CCF 分级是「计算机学会对会议和期刊的推荐目录」，
+        中科院分区和 JCR 分区是「基于影响因子对期刊的排名」，两者评价逻辑完全不同，
+        不存在换算关系。同一本期刊完全可能出现「CCF-A + 中科院 4 区」的情况。
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="journals">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">02</span>人工智能领域 CCF-A 类期刊</h2>
+        <p>依据 CCF 目录第七版，人工智能领域 A 类期刊共 4 本。影响因子与分区逐年浮动，下表为近期公开数据，投稿前请复核官方最新值。</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="rank">
+          <thead>
+            <tr>
+              <th>期刊</th><th>全称</th><th>CCF</th><th>中科院</th><th>影响因子</th><th>特点与适合方向</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>TPAMI</strong></td>
+              <td>IEEE Trans. on Pattern Analysis and Machine Intelligence</td>
+              <td><span class="lv lv-a">A</span></td>
+              <td>1 区 TOP</td>
+              <td>约 20</td>
+              <td>模式识别与 CV 公认第一顶刊，要求理论创新 + 实验完备，录用率约 10%–15%，审稿 8–10 个月</td>
+            </tr>
+            <tr>
+              <td><strong>IJCV</strong></td>
+              <td>International Journal of Computer Vision</td>
+              <td><span class="lv lv-a">A</span></td>
+              <td>2 区</td>
+              <td>约 10–11</td>
+              <td>视觉方向传统强刊，看重理论深度与普适性，3D 视觉、几何视觉、视频分析方向居多</td>
+            </tr>
+            <tr>
+              <td><strong>AI</strong></td>
+              <td>Artificial Intelligence</td>
+              <td><span class="lv lv-a">A</span></td>
+              <td>2 区</td>
+              <td>约 5</td>
+              <td>历史最久的 AI 综合期刊，偏知识表示、逻辑推理、智能规划、多智能体，重方法学贡献</td>
+            </tr>
+            <tr>
+              <td><strong>JMLR</strong></td>
+              <td>Journal of Machine Learning Research</td>
+              <td><span class="lv lv-a">A</span></td>
+              <td>4 区</td>
+              <td>约 4</td>
+              <td>机器学习理论标杆，开源免费无版面费。<strong>影响因子低但学术地位极高</strong>，纯工程应用不建议投</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warn">
+        <strong>注意：</strong>TNNLS、TKDE、TMM 等常被误认为 AI 方向 A 类。
+        TNNLS 在上一版目录中为人工智能 B 类，TKDE 属数据库 / 数据挖掘方向，
+        TMM 属图形学与多媒体方向（第七版确认为 A 类）。<strong>分级以你所在单位认定的目录完整版为准</strong>，
+        别照抄网上的二手表格。
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="confs">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">03</span>人工智能及相关领域重要学术会议</h2>
+        <p>共收录 49 个会议，覆盖 10 个研究方向。可按方向与 CCF 等级筛选，并查看对应方向的投稿建议。</p>
+      </div>
+
+      <div class="filters">
+        <div class="filter-row">
+          <span class="filter-label">方向</span>
+          <div class="chips" id="dirChips">
+            <button type="button" class="chip is-active" data-dir="all">全部</button>
+            <button type="button" class="chip" data-dir="ml">机器学习</button>
+            <button type="button" class="chip" data-dir="cv">计算机视觉</button>
+            <button type="button" class="chip" data-dir="nlp">自然语言处理</button>
+            <button type="button" class="chip" data-dir="dm">数据挖掘检索</button>
+            <button type="button" class="chip" data-dir="robot">机器人</button>
+            <button type="button" class="chip" data-dir="speech">语音音频</button>
+            <button type="button" class="chip" data-dir="sec">网络安全</button>
+            <button type="button" class="chip" data-dir="mm">多媒体图形</button>
+            <button type="button" class="chip" data-dir="hci">人机交互</button>
+            <button type="button" class="chip" data-dir="se">软件工程</button>
+          </div>
+        </div>
+
+        <div class="filter-row">
+          <span class="filter-label">等级</span>
+          <div class="chips" id="lvChips">
+            <button type="button" class="chip is-active" data-lv="all">全部</button>
+            <button type="button" class="chip" data-lv="A">CCF-A</button>
+            <button type="button" class="chip" data-lv="B">CCF-B</button>
+            <button type="button" class="chip" data-lv="C">CCF-C</button>
+            <button type="button" class="chip" data-lv="none">未列入</button>
+          </div>
+        </div>
+
+        <div class="filter-row filter-row-search">
+          <input type="search" id="confSearch" placeholder="搜索会议名或关键词，如 CVPR、语音、推荐" aria-label="搜索会议">
+          <span class="filter-count" id="confCount"></span>
+        </div>
+      </div>
+
+      <div class="dir-tip" id="dirTip" hidden></div>
+
+      <div class="table-wrap">
+        <table class="rank" id="confTable">
+          <thead>
+            <tr>
+              <th>会议</th><th>所属方向</th><th>CCF</th><th>备注</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-dir="ml" data-lv="A"><td><strong>NeurIPS</strong></td><td>机器学习</td><td><span class="lv lv-a">A</span></td><td>与 ICML、ICLR 并称机器学习三大顶会，通常年末举办</td></tr>
+            <tr data-dir="ml" data-lv="A"><td><strong>ICML</strong></td><td>机器学习</td><td><span class="lv lv-a">A</span></td><td>机器学习理论与方法的旗舰会议</td></tr>
+            <tr data-dir="ml" data-lv="none"><td><strong>ICLR</strong></td><td>深度学习</td><td><span class="lv lv-none">未列入</span></td><td><strong>反直觉点：</strong>CCF 目录中未收录，但影响力与 NeurIPS、ICML 并列</td></tr>
+            <tr data-dir="ml" data-lv="A"><td><strong>AAAI</strong></td><td>AI 综合</td><td><span class="lv lv-a">A</span></td><td>覆盖面最广的 AI 综合会议，通常年初举办</td></tr>
+            <tr data-dir="ml" data-lv="A"><td><strong>IJCAI</strong></td><td>AI 综合</td><td><span class="lv lv-a">A</span></td><td>与 AAAI 并列的两大综合会议，年中举办</td></tr>
+            <tr data-dir="ml" data-lv="B"><td><strong>UAI</strong></td><td>不确定性 AI</td><td><span class="lv lv-b">B</span></td><td>概率图模型与不确定性推理</td></tr>
+            <tr data-dir="ml" data-lv="B"><td><strong>COLT</strong></td><td>学习理论</td><td><span class="lv lv-b">B</span></td><td>计算学习理论，偏数学证明与泛化界</td></tr>
+            <tr data-dir="ml" data-lv="B"><td><strong>ECAI</strong></td><td>AI 综合</td><td><span class="lv lv-b">B</span></td><td>欧洲人工智能会议，两年一届</td></tr>
+            <tr data-dir="ml" data-lv="C"><td><strong>AISTATS</strong></td><td>统计机器学习</td><td><span class="lv lv-c">C</span></td><td>统计与贝叶斯方法，与 UAI 社区重叠较多</td></tr>
+
+            <tr data-dir="cv" data-lv="A"><td><strong>CVPR</strong></td><td>计算机视觉</td><td><span class="lv lv-a">A</span></td><td>CV 方向投稿量最大的顶会，每年举办</td></tr>
+            <tr data-dir="cv" data-lv="A"><td><strong>ICCV</strong></td><td>计算机视觉</td><td><span class="lv lv-a">A</span></td><td>奇数年举办，录取标准严格</td></tr>
+            <tr data-dir="cv" data-lv="B"><td><strong>ECCV</strong></td><td>计算机视觉</td><td><span class="lv lv-b">B</span></td><td><strong>反直觉点：</strong>水平很高但 CCF 列为 B 类，偶数年举办</td></tr>
+            <tr data-dir="cv" data-lv="C"><td><strong>ACCV</strong></td><td>计算机视觉</td><td><span class="lv lv-c">C</span></td><td>亚洲计算机视觉会议，两年一届</td></tr>
+            <tr data-dir="cv" data-lv="C"><td><strong>BMVC</strong></td><td>计算机视觉</td><td><span class="lv lv-c">C</span></td><td>英国机器视觉会议，常作为顶会前的练兵场</td></tr>
+            <tr data-dir="cv" data-lv="C"><td><strong>ICPR</strong></td><td>模式识别</td><td><span class="lv lv-c">C</span></td><td>国际模式识别会议，两年一届</td></tr>
+            <tr data-dir="cv" data-lv="none"><td><strong>WACV</strong></td><td>计算机视觉</td><td><span class="lv lv-none">未列入</span></td><td>IEEE 冬季计算机视觉应用会议，年初举办</td></tr>
+
+            <tr data-dir="nlp" data-lv="A"><td><strong>ACL</strong></td><td>自然语言处理</td><td><span class="lv lv-a">A</span></td><td>NLP 方向最高级别会议，年中举办</td></tr>
+            <tr data-dir="nlp" data-lv="B"><td><strong>EMNLP</strong></td><td>自然语言处理</td><td><span class="lv lv-b">B</span></td><td><strong>反直觉点：</strong>影响力接近 ACL，但 CCF 列为 B 类，年末举办</td></tr>
+            <tr data-dir="nlp" data-lv="B"><td><strong>NAACL</strong></td><td>自然语言处理</td><td><span class="lv lv-b">B</span></td><td>北美计算语言学会分会</td></tr>
+            <tr data-dir="nlp" data-lv="B"><td><strong>COLING</strong></td><td>自然语言处理</td><td><span class="lv lv-b">B</span></td><td>国际计算语言学会议，两年一届</td></tr>
+            <tr data-dir="nlp" data-lv="C"><td><strong>CoNLL</strong></td><td>计算语言学</td><td><span class="lv lv-c">C</span></td><td>与 ACL 同期举办的共享任务为主</td></tr>
+            <tr data-dir="nlp" data-lv="C"><td><strong>NLPCC</strong></td><td>中文信息处理</td><td><span class="lv lv-c">C</span></td><td>CCF 中文计算会议，中文任务与国内场景友好</td></tr>
+
+            <tr data-dir="dm" data-lv="A"><td><strong>KDD</strong></td><td>数据挖掘</td><td><span class="lv lv-a">A</span></td><td>全称 SIGKDD，数据挖掘方向最高级别会议</td></tr>
+            <tr data-dir="dm" data-lv="A"><td><strong>SIGIR</strong></td><td>信息检索</td><td><span class="lv lv-a">A</span></td><td>检索与推荐系统方向重要会议</td></tr>
+            <tr data-dir="dm" data-lv="A"><td><strong>WWW</strong></td><td>万维网与挖掘</td><td><span class="lv lv-a">A</span></td><td>Web 搜索、推荐与网络数据挖掘</td></tr>
+            <tr data-dir="dm" data-lv="A"><td><strong>SIGMOD</strong></td><td>数据库</td><td><span class="lv lv-a">A</span></td><td>数据库方向顶会，数据管理类工作首选</td></tr>
+            <tr data-dir="dm" data-lv="A"><td><strong>VLDB</strong></td><td>数据库</td><td><span class="lv lv-a">A</span></td><td>超大规模数据库会议</td></tr>
+            <tr data-dir="dm" data-lv="A"><td><strong>ICDE</strong></td><td>数据工程</td><td><span class="lv lv-a">A</span></td><td>IEEE 数据工程国际会议</td></tr>
+            <tr data-dir="dm" data-lv="B"><td><strong>CIKM</strong></td><td>信息与知识管理</td><td><span class="lv lv-b">B</span></td><td>审稿周期相对友好，适合时间紧张时投稿</td></tr>
+            <tr data-dir="dm" data-lv="B"><td><strong>ICDM</strong></td><td>数据挖掘</td><td><span class="lv lv-b">B</span></td><td>IEEE 数据挖掘国际会议，年末举办</td></tr>
+            <tr data-dir="dm" data-lv="none"><td><strong>RecSys</strong></td><td>推荐系统</td><td><span class="lv lv-none">未列入</span></td><td>推荐系统专门会议，工业界参与度高</td></tr>
+
+            <tr data-dir="robot" data-lv="B"><td><strong>ICRA</strong></td><td>机器人</td><td><span class="lv lv-b">B</span></td><td>机器人方向规模最大的会议，每年举办</td></tr>
+            <tr data-dir="robot" data-lv="C"><td><strong>IROS</strong></td><td>机器人</td><td><span class="lv lv-c">C</span></td><td>智能机器人与系统会议，不同版本的认定存在差异，以本单位文件为准</td></tr>
+            <tr data-dir="robot" data-lv="none"><td><strong>CoRL</strong></td><td>机器人学习</td><td><span class="lv lv-none">未列入</span></td><td>机器人学习新兴顶会，与 NeurIPS 社区高度重叠</td></tr>
+
+            <tr data-dir="speech" data-lv="B"><td><strong>ICASSP</strong></td><td>语音与信号处理</td><td><span class="lv lv-b">B</span></td><td>信号处理领域规模最大的会议，覆盖音频、图像与多维信号</td></tr>
+            <tr data-dir="speech" data-lv="none"><td><strong>Interspeech</strong></td><td>语音</td><td><span class="lv lv-none">未列入</span></td><td>语音方向另一主场，与 ICASSP 并列为语音两大会议</td></tr>
+            <tr data-dir="speech" data-lv="none"><td><strong>ASRU</strong></td><td>语音</td><td><span class="lv lv-none">未列入</span></td><td>IEEE 口语与语言技术研讨会，两年一届</td></tr>
+
+            <tr data-dir="sec" data-lv="A"><td><strong>S&amp;P</strong></td><td>网络与信息安全</td><td><span class="lv lv-a">A</span></td><td>俗称 Oakland，安全方向公认第一会议</td></tr>
+            <tr data-dir="sec" data-lv="A"><td><strong>USENIX Security</strong></td><td>网络与信息安全</td><td><span class="lv lv-a">A</span></td><td>安全四大顶会之一，系统安全方向影响力大</td></tr>
+            <tr data-dir="sec" data-lv="A"><td><strong>CCS</strong></td><td>网络与信息安全</td><td><span class="lv lv-a">A</span></td><td>ACM 计算机与通信安全会议</td></tr>
+            <tr data-dir="sec" data-lv="A"><td><strong>NDSS</strong></td><td>网络与信息安全</td><td><span class="lv lv-a">A</span></td><td>网络与分布式系统安全研讨会</td></tr>
+            <tr data-dir="sec" data-lv="A"><td><strong>EUROCRYPT</strong></td><td>密码学</td><td><span class="lv lv-a">A</span></td><td>密码学理论顶会，与 CRYPTO 并列</td></tr>
+
+            <tr data-dir="mm" data-lv="A"><td><strong>ACM MM</strong></td><td>多媒体</td><td><span class="lv lv-a">A</span></td><td>多媒体与多模态旗舰会议，等级以目录版本为准</td></tr>
+            <tr data-dir="mm" data-lv="A"><td><strong>SIGGRAPH</strong></td><td>计算机图形学</td><td><span class="lv lv-a">A</span></td><td>图形学方向最高级别会议</td></tr>
+            <tr data-dir="mm" data-lv="B"><td><strong>ICME</strong></td><td>多媒体</td><td><span class="lv lv-b">B</span></td><td>IEEE 多媒体与博览会议，每年举办</td></tr>
+
+            <tr data-dir="hci" data-lv="A"><td><strong>CHI</strong></td><td>人机交互</td><td><span class="lv lv-a">A</span></td><td>人机交互方向最高级别会议</td></tr>
+            <tr data-dir="hci" data-lv="A"><td><strong>UIST</strong></td><td>人机交互</td><td><span class="lv lv-a">A</span></td><td>用户界面软件与技术，规模小但含金量高</td></tr>
+            <tr data-dir="hci" data-lv="A"><td><strong>UbiComp</strong></td><td>普适计算</td><td><span class="lv lv-a">A</span></td><td>普适计算与可穿戴计算</td></tr>
+
+            <tr data-dir="se" data-lv="A"><td><strong>ICSE</strong></td><td>软件工程</td><td><span class="lv lv-a">A</span></td><td>软件工程方向公认最高级别会议</td></tr>
+            <tr data-dir="se" data-lv="A"><td><strong>FSE</strong></td><td>软件工程</td><td><span class="lv lv-a">A</span></td><td>软件工程基础会议，与 ESEC 合并举办</td></tr>
+            <tr data-dir="se" data-lv="A"><td><strong>ASE</strong></td><td>软件工程</td><td><span class="lv lv-a">A</span></td><td>自动化软件工程，对 AI4SE 方向友好</td></tr>
+            <tr data-dir="se" data-lv="A"><td><strong>ISSTA</strong></td><td>软件工程</td><td><span class="lv lv-a">A</span></td><td>软件测试与分析</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="empty-state" id="confEmpty" hidden>没有匹配的会议，试试放宽筛选条件或清空搜索词。</div>
+
+      <div class="callout callout-info">
+        <strong>为什么有的顶会是 B 类？</strong>
+        CCF 分级是学会对会议整体的推荐意见，受收录历史、学科归类与评审周期影响，
+        并不完全等同于当下的实际声誉。选会投稿时应结合<strong>本方向的同行共识、录用率与单位认定文件</strong>综合判断，
+        而不是只盯着一个字母。
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="tools">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">04</span>文献检索工具与研究工作流</h2>
+        <p>按研究活动的四个环节组织：检索获取 → 脉络梳理 → 文献管理 → 前沿跟踪。</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="card-icon">检索</div>
+          <h3>文献检索</h3>
+          <p><strong>arXiv</strong> 第一时间获取最新预印本；<strong>DBLP</strong> 查询作者与会议的权威出版记录；<strong>Google Scholar</strong> 覆盖面最广；<strong>Semantic Scholar</strong> 提供高质量的语义检索与摘要。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">脉络</div>
+          <h3>脉络梳理</h3>
+          <p><strong>Connected Papers</strong> 生成引用关系图谱，快速呈现一个领域的演化路径；<strong>ResearchRabbit</strong> 支持持续追踪；<strong>Papers with Code</strong> 用于查找论文对应的开源实现。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">管理</div>
+          <h3>文献管理</h3>
+          <p><strong>Zotero</strong> 开源免费，支持浏览器一键抓取，配合插件可同步与批注；写作阶段搭配 <strong>Overleaf</strong> 与 BibTeX 统一管理引用文献。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">跟踪</div>
+          <h3>前沿跟踪</h3>
+          <p>定期查看顶级会议官网公布的录用论文列表与最佳论文；订阅 arXiv 的 cs.AI、cs.LG、cs.CV、cs.CL 分类每日更新。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">复现</div>
+          <h3>实验复现</h3>
+          <p>优先选择公开代码与数据集的论文（可通过 Papers with Code 筛选）。复现既是验证论文可信度的最快方式，也是开展改进性研究的起点。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">写作</div>
+          <h3>综述撰写</h3>
+          <p>先阅读本领域近三年的综述建立知识框架，再沿引用链回溯原始工作，最后以表格横向对比不同方法、数据集与评价指标。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="method">
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2><span class="sec-num">05</span>论文阅读方法：三遍阅读法</h2>
+        <p>
+          科研工作中需要处理的文献量远大于可精读的量。「三遍阅读法」把一次阅读拆成由粗到精的三个层次，
+          每一遍都有明确目标，读完后即可判断是否需要投入更多时间。
+        </p>
+        <ol class="steps">
+          <li><strong>概览结构（5–10 分钟）。</strong>读标题、摘要、引言、各级标题与图表，跳过公式与证明，回答一个问题——这篇论文属于哪一类、解决了什么问题。</li>
+          <li><strong>细读内容（约 1 小时）。</strong>仔细看图表与实验设置，标出尚未掌握的参考文献，理解方法与结论之间的支撑关系，仍可跳过繁琐证明。</li>
+          <li><strong>复现式精读（数小时）。</strong>在脑中重构整篇论文，逐行推导假设与结论，记录创新点、局限与可改进之处，至此这篇论文才真正进入你的知识体系。</li>
+        </ol>
+        <dl class="stats">
+          <div><dt>3 遍</dt><dd>由粗到精的阅读层次</dd></div>
+          <div><dt>先综述</dt><dd>建立领域框架再深挖</dd></div>
+          <div><dt>必做笔记</dt><dd>记录创新点与局限</dd></div>
+        </dl>
+      </div>
+      <div class="about-note">
+        <blockquote>
+          “读论文的目标不是读得多，而是建立一张能定位自己工作的地图——
+          知道领域里谁做了什么、哪里还有空白。”
+          <cite>— 编者整理</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="pitfalls">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">06</span>常见认知误区辨析</h2>
+        <p>下列误区在理解学术评价体系时最为常见，按类型排列，不分先后。</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="pitfall">
+          <h3>以为 ICLR 是 CCF-A</h3>
+          <p>CCF 目录中并未收录 ICLR。但它在深度学习领域的实际声誉与 NeurIPS、ICML 并列，投稿量常年位居前列。目录等级与实际声誉不一致时，以本单位认定文件为准。</p>
+        </div>
+        <div class="pitfall">
+          <h3>用影响因子评价单篇论文</h3>
+          <p>影响因子是期刊层面的统计指标，受学科体量、综述占比与自引影响很大。JMLR 影响因子仅约 4，却是机器学习理论的顶级阵地。</p>
+        </div>
+        <div class="pitfall">
+          <h3>把 CCF 分级当成论文分级</h3>
+          <p>CCF 分级针对的是会议和期刊整体，不是具体论文。同一个会议内部的论文质量差异极大，还需看是否获最佳论文提名、引用量与实际影响力。</p>
+        </div>
+        <div class="pitfall">
+          <h3>忽略中科院分区的版本差异</h3>
+          <p>中科院分区存在基础版与升级版，且分大类与小类。毕业或评奖认定时务必先确认本单位采用哪一套，避免出现「以为 1 区实际 2 区」的情况。</p>
+        </div>
+        <div class="pitfall">
+          <h3>只看二手分级表格</h3>
+          <p>网上流传的分级表多为旧版且常含错误。CCF 目录约三年更新一次（第七版为 2026 年 3 月），投稿前务必查官方最新完整版。</p>
+        </div>
+        <div class="pitfall">
+          <h3>踩中预警期刊与掠夺性会议</h3>
+          <p>部分期刊被列入国际期刊预警名单，一些会议以营利为目的、审稿形同虚设。投稿前查预警名单、确认会议是否有稳定的主办学会与往届论文集。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="guides">
+    <div class="container">
+      <div class="section-head">
+        <h2><span class="sec-num">07</span>延伸指南</h2>
+        <p>除本页的分级与检索信息外，另有六个专题页面覆盖从写作到投稿的完整环节。</p>
+      </div>
+
+      <div class="grid grid-3">
+        <a class="card" href="writing.html">
+          <h3>论文写作与排版</h3>
+          <p>IMRaD 结构、摘要与引言写法、图表与数据呈现规范、常见语言问题。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="submit.html">
+          <h3>投稿与返修</h3>
+          <p>投前自查、选会选刊、投稿状态解读与审稿意见回复的结构。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="search.html">
+          <h3>文献检索实操</h3>
+          <p>布尔检索式、关键词扩展、滚雪球追踪与去重筛检流水线。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="ethics.html">
+          <h3>学术规范与 AI 伦理</h3>
+          <p>引用边界、重复发表、署名规则与生成式 AI 的披露政策。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="glossary.html">
+          <h3>术语速查表</h3>
+          <p>投稿、评审、计量与实验环节常见英文术语的中英对照。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+        <a class="card" href="deadline.html">
+          <h3>截稿时间线</h3>
+          <p>主要会议的投稿月份、周期估算、AoE 时区换算与排期建议。</p>
+          <span class="card-link">前往 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="cta">
+        <h2><span class="sec-num">08</span>数据来源说明与联系方式</h2>
+        <p>本站内容整理自公开发布的学术目录、期刊分区数据与研究工具类资源。分级与分区以中国计算机学会、中科院文献情报中心及各单位公布的最新认定文件为准，如发现数据更新或错漏，欢迎通过邮件指正。</p>
+        <div class="cta-actions">
+          <a class="btn" href="mailto:2112671075@stu.fosu.edu.cn">邮件联系</a>
+          <a class="btn btn-ghost" href="#top">返回顶部</a>
+        </div>
+        <p class="cta-tip">赖七 · 佛山大学 软件工程 · 2112671075@stu.fosu.edu.cn</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="logo" href="#top">
+        <img src="assets/img/favicon.svg" alt="" width="24" height="24">
+        <span>AI 学术文献指南</span>
+      </a>
+      <p>系统整理人工智能领域的学术评价体系、期刊与会议分级，以及文献检索与阅读方法，数据以官方发布为准。</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>指南</h4>
+        <a href="writing.html">论文写作</a>
+        <a href="submit.html">投稿与返修</a>
+        <a href="search.html">检索实操</a>
+      </div>
+      <div>
+        <h4>参考</h4>
+        <a href="ethics.html">学术规范</a>
+        <a href="glossary.html">术语速查</a>
+        <a href="deadline.html">截稿时间线</a>
+      </div>
+      <div>
+        <h4>本页</h4>
+        <a href="#ranking">评价体系</a>
+        <a href="#confs">重要会议</a>
+        <a href="#about">数据来源</a>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <a href="#guides">延伸指南</a>
+        <a href="mailto:2112671075@stu.fosu.edu.cn">联系作者</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© <span id="year">2026</span> 赖七 · 佛山大学 软件工程. 保留所有权利。</p>
+    <!-- 本站当前使用第三方托管域名；若日后绑定国内自有域名，需完成 ICP 备案与公安备案，并在此展示备案号 -->
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
