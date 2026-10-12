@@ -58,7 +58,7 @@
       var total = 0;
       rows.forEach(function (row) {
         var show = sets.every(function (s) {
-          return s.value === 'all' || row.getAttribute(s.attr) === s.value;
+          return s.value === 'all' || row.getAttribute('data-' + s.attr) === s.value;
         });
         if (show && query) {
           show = row.textContent.toLowerCase().indexOf(query) !== -1;
